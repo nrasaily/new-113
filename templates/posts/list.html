@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}List{% endblock title %}
+
+{% block content %} 
+<h1>list.html</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-success" value="list">
+</form>
+
+
+
+{% endblock content %}
+
+
