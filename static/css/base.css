@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+    color: rgb(40, 40, 227);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar-brand, .nav-link {
+    background-color: ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+body{
+    margin: 0;
+    font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+    color: #333;
+    text-align: center;
+}
+nav a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color;
+}
+
+img{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 8px;
+}

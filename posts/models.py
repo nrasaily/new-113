@@ -7,7 +7,7 @@ class Status(models.Model):
     description = models.CharField(max_length=256)
 
     def __str__(self):
-        return self.name1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112
+        return self.name
 
 # Create your models here.
 class Post(models.Model):

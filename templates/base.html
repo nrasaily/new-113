@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,7 @@
     rel="stylesheet"
      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
      crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
     
@@ -32,8 +35,6 @@
                         {% else %}
                         <a class="nav-link" href="{% url 'login' %}">Log In</a>
                         <a href="{% url 'signup' %}" class="nav-link">Sign Up</a>
-                        <a href="{% url 'delete' %}" class="nav-link">Delete Post</a>
-                        <a href="{% url 'list' %}" class="nav-link">List Post</a>
                         <a href="{% url 'create' %}" class="nav-link">New Post</a>
                         {% endif %}
                     </div>

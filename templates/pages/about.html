@@ -1,10 +1,35 @@
-
+<h1>About.html file</h1>
 {% extends 'base.html' %}
+
+{% load static %}
 
 {% block title %}About{% endblock title %}
 
 {% block content %}
-<h1>About</h1>
+
+<h1 class="text-center">About Us</h1>
+
+<p class="text-center">
+We are a passionate group of developers, educators, and creators who believe in the power of open knowledge and community-based learning. Our platform was built to make coding and web development simple, practical, and enjoyable for everyone.
+</p>
+
+<p class="text-center">
+Our journey began with a shared frustration—how difficult it can be to find beginner-friendly, real-world tutorials. So we decided to create a space where anyone, regardless of background, could come to learn, build, and grow at their own pace.
+</p>
+
+<p class="text-center">
+We focus on empowering individuals with the tools, skills, and mindset they need to succeed in the tech world. Our content includes hands-on examples, structured lessons, and guidance from experienced mentors.
+</p>
+
+<p class="text-center">
+As we grow, our mission remains the same: to build a friendly, helpful, and creative learning environment where curiosity leads to confidence and skill.
+</p>
+
+<p class="text-center">
+Thank you for being a part of our journey. Together, we can make learning more human, more fun, and more powerful than ever.
+</p>
+
+<img src="{% static 'img/2ndabout.png' %}" alt="" width="50%">
 
 <p>
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus delectus, vero nam corrupti dicta reiciendis quibusdam? Nesciunt harum rem quo minus dicta quaerat, aperiam ut illum, eum nobis atque!
