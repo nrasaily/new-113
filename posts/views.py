@@ -8,7 +8,7 @@ from django.views.generic import (
     
 )
 from .models import Post
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
@@ -39,10 +39,15 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = "posts/create.html"
     fields = ["title", "subtitle", "body", "author", "status"]
+
+    success_url = reverse_lazy("list")  # list doesnot exist yet
+
+    #def get_success_url(self):
+     #   return reverse('list')
     
 
 class PostListView(ListView):
-    template_name = "post/list.html"
+    template_name = "posts/list.html"
     model = Post
 
 class PostEditView(UpdateView):
