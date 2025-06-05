@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}List{% endblock title %}
+{% block title %}Posts{% endblock title %}
 
 {% block content %} 
-<h1>list.html</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn btn-success" value="list">
-</form>
+<h1>{{ title }} Posts</h1>
+{% for post in post_list %}
+<div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ post.subtitle }}</h6>
+            <p class="card-text">{{ post.body|truncatechars:128 }}</p>
+            <a href="{% url 'detail' post.id %}" class="card-link">Continue reading....</a>
+        </div>
+</div>
 
-
+{% endfor %}
 
 {% endblock content %}
 
