@@ -116,7 +116,7 @@ class PostDetailView(UserPassesTestMixin, DetailView):
             return True 
         elif post.status.name == "archieved" and self.request.user.is_authenticated:
             return True
-        elif post.status.name == "draft" and self.request.user == post.author:
+        elif post.status.name == "drafts" and self.request.user == post.author:
             return True
         else:
             return False

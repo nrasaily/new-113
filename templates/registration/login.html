@@ -9,13 +9,13 @@
 
 <h1>Log In</h1>
 
-<form method="POST">
+<form method="POST" class="p-4 shadow-m bg-light text-center ">
     {% csrf_token %}
     
     {{ form.as_p }}
     
-    <input type="submit" class="btn btn-success" value="Log In">
+    <input type="submit" class="btn btn-success lg-sm" value="Log In">
 </form>
-<small>Did you forget your password? <a class="btn btn-success" href="{% url 'password_reset' %}">Click here</a>to reset it!</a> </small>
+<small class="text-center bg-body-tertiary">Did you forget your password? <a class="btn btn-success lg-sm" href="{% url 'password_reset' %}">Click here</a>to reset it!</a> </small>
     
 {% endblock content %}
